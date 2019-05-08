@@ -1,0 +1,4 @@
+com\betssonassignment\restservice\repository\UserRepository.class
+com\betssonassignment\restservice\entity\User.class
+com\betssonassignment\restservice\repository\CreateUser.class
+com\betssonassignment\restservice\Application.class
