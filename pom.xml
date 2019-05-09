@@ -33,4 +33,30 @@
            
         </dependency>
     </dependencies>
+    
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<imageName>${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<directory>${project.build.directory}</directory>
+							<!-- <include>${project.build.finalName}.jar</include> <include>${project.b</include> -->
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</resource>
+					</resources>
+					
+				</configuration>
+				
+			</plugin>
+		</plugins>
+		<finalName>mysql-rest-docker</finalName>
+	</build>
 </project>
